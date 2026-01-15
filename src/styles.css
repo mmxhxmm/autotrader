@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: nicer Swiper pagination spacing */
+.hero-pagination .swiper-pagination-bullet {
+  opacity: 0.35;
+}
+.hero-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+}
