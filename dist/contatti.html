@@ -8,9 +8,9 @@
     <title>Autotrader Bergámo | New and Used Cars</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="src/assets/images/logo.png" />
+    <link rel="icon" type="image/png" href="assets/logo-63Hesafd.png" />
     <!-- Optional (better browser support) -->
-    <link rel="apple-touch-icon" href="src/assets/images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon-DmYX9pao.png" />
 
     <meta name="description"
         content="New cars, KM0 and certified used cars. Short- and long-term rental. Bergámo (BG)." />
@@ -39,7 +39,7 @@
             <a href="/index.html" class="group flex items-center gap-3">
                 <span
                     class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-white/15 to-white/5 shadow-sm overflow-hidden transition group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-                    <img src="../src/assets/images/logo.png" alt="Autotrader Villongo" class="h-12 w-12 object-contain" />
+                    <img src="assets/logo-63Hesafd.png" alt="Autotrader Villongo" class="h-12 w-12 object-contain" />
                 </span>
 
 
@@ -68,6 +68,23 @@
                     href="index.html#where-we-are">Dove siamo</a>
 
             </nav>
+            <!-- Mobile Menu Button -->
+            <button
+                class="md:hidden inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+                @click="open = !open" :aria-expanded="open" aria-label="Toggle menu">
+                <span class="sr-only">Toggle menu</span>
+
+                <!-- Icon swap -->
+                <svg x-show="!open" x-cloak xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+
+                <svg x-show="open" x-cloak xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
 
             <!-- Desktop CTA -->
             <div class="hidden md:flex items-center gap-3">
@@ -80,23 +97,7 @@
 
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button
-            class="md:hidden inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
-            @click="open = !open" :aria-expanded="open" aria-label="Toggle menu">
-            <span class="sr-only">Toggle menu</span>
 
-            <!-- Icon swap -->
-            <svg x-show="!open" x-cloak xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-
-            <svg x-show="open" x-cloak xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
 
         </div>
 
@@ -206,7 +207,8 @@
 
                         <!-- Full name -->
                         <div>
-                            <label class="text-xs font-bold uppercase tracking-[0.18em] text-zinc-300">Nome e cognom</label>
+                            <label class="text-xs font-bold uppercase tracking-[0.18em] text-zinc-300">Nome e
+                                cognom</label>
                             <input name="full_name" required type="text" placeholder="Your full name"
                                 class="mt-2 w-full rounded-2xl border border-white/15 bg-zinc-950/40 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition focus:border-white/30" />
                         </div>
@@ -214,14 +216,14 @@
                         <!-- Phone + Country -->
                         <div class="grid gap-4 sm:grid-cols-2">
                             <div>
-                                <label class="text-xs font-bold uppercase tracking-[0.18em] text-zinc-300">Numero di telefono</label>
+                                <label class="text-xs font-bold uppercase tracking-[0.18em] text-zinc-300">Numero di
+                                    telefono</label>
                                 <input name="phone" required type="tel" placeholder="+39 ..."
                                     class="mt-2 w-full rounded-2xl border border-white/15 bg-zinc-950/40 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition focus:border-white/30" />
                             </div>
 
                             <div>
-                                <label
-                                    class="text-xs font-bold uppercase tracking-[0.18em] text-zinc-300">Paes</label>
+                                <label class="text-xs font-bold uppercase tracking-[0.18em] text-zinc-300">Paes</label>
                                 <input name="country" required type="text" placeholder="Italy"
                                     class="mt-2 w-full rounded-2xl border border-white/15 bg-zinc-950/40 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition focus:border-white/30" />
                             </div>

@@ -109,19 +109,7 @@
                     href="index.html#where-we-are">Dove siamo</a>
 
             </nav>
-
-            <!-- Desktop CTA -->
-            <div class="hidden md:flex items-center gap-3">
-                <a href="/contatti.html"
-                    class="inline-flex items-center gap-2 rounded-2xl bg-white px-5 py-2.5 text-sm font-bold text-zinc-900 shadow-[0_10px_25px_rgba(0,0,0,0.30)] transition hover:-translate-y-0.5 hover:bg-zinc-200">
-                    Contattaci
-                    <span aria-hidden="true">→</span>
-                </a>
-            </div>
-
-        </div>
-
-        <!-- Mobile Menu Button -->
+                    <!-- Mobile Menu Button -->
         <button
             class="md:hidden inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
             @click="open = !open" :aria-expanded="open" aria-label="Toggle menu">
@@ -138,6 +126,19 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
+
+            <!-- Desktop CTA -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="/contatti.html"
+                    class="inline-flex items-center gap-2 rounded-2xl bg-white px-5 py-2.5 text-sm font-bold text-zinc-900 shadow-[0_10px_25px_rgba(0,0,0,0.30)] transition hover:-translate-y-0.5 hover:bg-zinc-200">
+                    Contattaci
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+        </div>
+
+
 
         </div>
 
