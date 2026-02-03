@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Autotrader Bergámo | New and Used Cars</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="src/assets/images/logo.png" />
+    <!-- Optional (better browser support) -->
+    <link rel="apple-touch-icon" href="src/assets/images/apple-touch-icon.png" />
+
+    <meta name="description"
+        content="New cars, KM0 and certified used cars. Short- and long-term rental. Bergámo (BG)." />
+
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-zinc-950 text-white">
+
+    <!-- Header / Nav -->
+    <header x-data="{ open:false }" class="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/70 backdrop-blur-xl">
+        <!-- subtle header glow -->
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/5 to-transparent"></div>
+
+        <div class="relative mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+
+            <!-- Logo -->
+            <a href="/index.html" class="group flex items-center gap-3">
+                <span
+                    class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-white/15 to-white/5 shadow-sm overflow-hidden transition group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+                    <img src="../src/assets/images/logo.png" alt="Autotrader Villongo" class="h-12 w-12 object-contain" />
+                </span>
+
+
+                <div class="leading-tight">
+                    <p class="text-sm font-semibold tracking-tight text-white">
+                        Autotrader
+                        <span class="text-white/40">•</span>
+                        <span class="text-zinc-300">Bergámo</span>
+                    </p>
+                    <p class="text-xs text-white/55 -mt-0.5">
+                        Multimarca • KM0 • Usato certificato
+                    </p>
+
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-white/80">
+                <a class="transition hover:text-white hover:underline hover:underline-offset-8 decoration-white/30"
+                    href="/index.html">Autotrader</a>
+
+                <a class="transition hover:text-white hover:underline hover:underline-offset-8 decoration-white/30"
+                    href="/valuta-usato.html">Valuta il tuo usato</a>
+
+                <a class="transition hover:text-white hover:underline hover:underline-offset-8 decoration-white/30"
+                    href="index.html#where-we-are">Dove siamo</a>
+
+            </nav>
+
+            <!-- Desktop CTA -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="/contatti.html"
+                    class="inline-flex items-center gap-2 rounded-2xl bg-white px-5 py-2.5 text-sm font-bold text-zinc-900 shadow-[0_10px_25px_rgba(0,0,0,0.30)] transition hover:-translate-y-0.5 hover:bg-zinc-200">
+                    Contattaci
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+            class="md:hidden inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+            @click="open = !open" :aria-expanded="open" aria-label="Toggle menu">
+            <span class="sr-only">Toggle menu</span>
+
+            <!-- Icon swap -->
+            <svg x-show="!open" x-cloak xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+
+            <svg x-show="open" x-cloak xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        </div>
+
+        <!-- Mobile menu -->
+        <div x-show="open" x-cloak @click.outside="open=false" @keydown.escape.window="open=false" class="md:hidden">
+            <!-- Smooth transition wrapper -->
+            <div x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2"
+                class="border-t border-white/10 bg-zinc-950/85 backdrop-blur-xl">
+                <div class="mx-auto max-w-6xl px-4 py-4 grid gap-2 text-sm font-semibold text-white">
+
+                    <a class="rounded-2xl px-4 py-3 transition hover:bg-white/10" href="index.html"
+                        @click="open=false">Autotrader</a>
+                    <a class="rounded-2xl px-4 py-3 transition hover:bg-white/10" href="valuta-usato.html"
+                        @click="open=false">Valuta il tuo usato</a>
+                    <a class="rounded-2xl px-4 py-3 transition hover:bg-white/10" href="#where-we-are"
+                        @click="open=false">Dove siamo</a>
+
+                    <a class="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-4 py-3 text-center font-bold text-zinc-900 shadow-[0_10px_25px_rgba(0,0,0,0.30)] transition hover:bg-zinc-200"
+                        href="contatti.html" @click="open=false">
+                        Contattaci <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <!-- Contact Hero + Form -->
+    <section class="relative min-h-[85vh] flex items-center overflow-hidden border-t border-white/10 bg-zinc-950">
+        <!-- Background layers -->
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-zinc-900 via-zinc-950 to-black"></div>
+        <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_25%_20%,rgba(255,255,255,0.06),transparent_60%)]">
+        </div>
+        <div
+            class="pointer-events-none absolute -top-40 left-1/2 h-96 w-[44rem] -translate-x-1/2 rounded-full bg-white/10 blur-3xl">
+        </div>
+
+        <div class="relative mx-auto max-w-6xl px-4 py-20 sm:py-28 w-full">
+            <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+
+                <!-- Left: Text -->
+                <div>
+                    <p
+                        class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-zinc-200 backdrop-blur">
+                        <span class="h-1.5 w-1.5 rounded-full bg-white/80"></span>
+                        Contatti
+                    </p>
+
+                    <h1 class="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                        Parliamone.
+                        <span class="block text-cyan-700">Rispondiamo velocemente.</span>
+                    </h1>
+
+                    <p class="mt-6 max-w-xl text-sm leading-relaxed text-zinc-300 sm:text-base">
+                        Inviaci la tua richiesta per auto usate, KM0, valutazione dell’usato o noleggio.
+                        Il nostro team ti contatterà con le migliori soluzioni.
+                    </p>
+
+                    <!-- Quick info cards -->
+                    <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                        <div class="rounded-3xl border border-white/15 bg-white/10 p-5 backdrop-blur">
+                            <p class="text-xs font-bold uppercase tracking-widest text-zinc-300">Telefono</p>
+                            <a href="tel:+39000000000" class="mt-2 block text-lg font-bold text-white hover:underline">
+                                +39 000 000000
+                            </a>
+                            <p class="mt-1 text-sm text-zinc-400">Lun–Sab • Orari di ufficio</p>
+                        </div>
+
+                        <div class="rounded-3xl border border-white/15 bg-white/10 p-5 backdrop-blur">
+                            <p class="text-xs font-bold uppercase tracking-widest text-zinc-300">Email</p>
+                            <a href="mailto:-@gmail.com"
+                                class="mt-2 block text-lg font-bold text-white hover:underline">
+                                -@gmail.com
+                            </a>
+                            <p class="mt-1 text-sm text-zinc-400">Rispondiamo in giornata</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div
+                    class="rounded-[2rem] border border-white/15 bg-white/10 p-6 sm:p-8 backdrop-blur shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+                    <h2 class="text-xl font-bold text-white">Invia un messaggio</h2>
+                    <p class="mt-2 text-sm text-zinc-300">
+                        Compila il modulo e ti ricontatteremo al più presto.
+                    </p>
+
+                    <!-- FORM: sends to email via FormSubmit (no backend needed) -->
+                    <form class="mt-8 grid gap-4" action="https://formsubmit.co/arslanshaukat89@gmail.com"
+                        method="POST">
+                        <!-- FormSubmit settings -->
+                        <input type="hidden" name="_subject" value="New Contact Request - Autotrader Bergámo" />
+                        <input type="hidden" name="_template" value="table" />
+                        <input type="hidden" name="_captcha" value="false" />
+                        <!-- optional: redirect after submit -->
+                        <input type="hidden" name="_next" value="/thanks.html" />
+
+                        <!-- Honeypot anti-spam -->
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+                        <!-- Full name -->
+                        <div>
+                            <label class="text-xs font-bold uppercase tracking-[0.18em] text-zinc-300">Nome e cognom</label>
+                            <input name="full_name" required type="text" placeholder="Your full name"
+                                class="mt-2 w-full rounded-2xl border border-white/15 bg-zinc-950/40 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition focus:border-white/30" />
+                        </div>
+
+                        <!-- Phone + Country -->
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <div>
+                                <label class="text-xs font-bold uppercase tracking-[0.18em] text-zinc-300">Numero di telefono</label>
+                                <input name="phone" required type="tel" placeholder="+39 ..."
+                                    class="mt-2 w-full rounded-2xl border border-white/15 bg-zinc-950/40 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition focus:border-white/30" />
+                            </div>
+
+                            <div>
+                                <label
+                                    class="text-xs font-bold uppercase tracking-[0.18em] text-zinc-300">Paes</label>
+                                <input name="country" required type="text" placeholder="Italy"
+                                    class="mt-2 w-full rounded-2xl border border-white/15 bg-zinc-950/40 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition focus:border-white/30" />
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div>
+                            <label
+                                class="text-xs font-bold uppercase tracking-[0.18em] text-zinc-300">Descrizione</label>
+                            <textarea name="description" required rows="5"
+                                placeholder="Descrivici le tue esigenze (dettagli della permuta, modello, budget, date di noleggio…)"
+                                class="mt-2 w-full resize-none rounded-2xl border border-white/15 bg-zinc-950/40 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition focus:border-white/30"></textarea>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit"
+                            class="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3.5 text-sm font-bold text-zinc-900 shadow-[0_12px_35px_rgba(0,0,0,0.35)] transition hover:-translate-y-0.5 hover:bg-zinc-200">
+                            Invia messaggio <span aria-hidden="true">→</span>
+                        </button>
+
+                        <p class="mt-2 text-xs text-zinc-400">
+                            Inviando questo messaggio, accetti la nostra <a class="text-white hover:underline"
+                                href="privacy.html">Privacy Policy</a>.
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative border-t border-white bg-slate-800 text-white">
+
+        <!-- Subtle depth & glow -->
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-700/40 via-slate-800 to-slate-900">
+        </div>
+        <div
+            class="pointer-events-none absolute -top-40 left-1/2 h-72 w-[40rem] -translate-x-1/2 rounded-full bg-white/10 blur-3xl">
+        </div>
+
+        <div class="relative mx-auto max-w-6xl px-4 py-14 text-sm text-white/75">
+            <div class="grid gap-10 md:grid-cols-3">
+
+                <!-- Company -->
+                <div>
+                    <p class="text-base font-bold text-white">Autotrader srl</p>
+                    <p class="mt-3 text-sm text-white/70">
+                        ---, <br />
+                        15 — Bergámo (BG)
+                    </p>
+                    <p class="mt-3 text-sm">
+                        <span class="text-white/60">Tel:</span>
+                        <a href="tel:+39000000000" class="font-semibold text-white hover:underline">
+                            000 000000
+                        </a>
+                    </p>
+                    <p class="mt-1 text-sm">
+                        <span class="text-white/60">Mail:</span>
+                        <a href="mailto:-@gmail.com" class="font-semibold text-white hover:underline">
+                            -@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <p class="text-base font-bold text-white">Links</p>
+                    <div class="mt-4 grid gap-3">
+                        <a class="inline-flex items-center gap-2 hover:underline" href="src/privacy_policy.html">
+                            Privacy Policy
+                        </a>
+                        <a class="inline-flex items-center gap-2 hover:underline" href="src/cookie.html">
+                            Cookie Policy
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div>
+                    <p class="text-base font-bold text-white">Richieste</p>
+                    <p class="mt-3 max-w-sm text-sm text-white/70">
+                        Scrivici per un preventivo personalizzato o per informazioni su permuta e noleggio.
+                    </p>
+
+                    <a class="mt-5 inline-flex items-center gap-2 rounded-2xl bg-white px-5 py-2.5 text-sm font-bold text-slate-900 shadow-[0_10px_25px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:bg-slate-100"
+                        href="contatti.html">
+                        Contattaci
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bottom bar -->
+            <div
+                class="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
+                <p>
+                    © <span id="year"></span> Autotrader | Tutti i diritti riservati
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

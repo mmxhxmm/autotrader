@@ -1,0 +1,1186 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Autotrader Bergámo | New and Used Cars</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/logo-63Hesafd.png" />
+    <!-- Optional (better browser support) -->
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon-DmYX9pao.png" />
+
+    <meta name="description"
+        content="New cars, KM0 and certified used cars. Short- and long-term rental. Bergámo (BG)." />
+
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script type="module" crossorigin src="/assets/index-BZLUN_Y-.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BLfxpl9q.css">
+</head>
+
+<body class="bg-zinc-900 text-white antialiased">
+    <!-- Top bar -->
+    <div class="border-b bg-slate-100">
+        <div class="mx-auto max-w-6xl px-4 py-2 text-xs sm:text-sm">
+            <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+
+                <!-- Left info -->
+                <div
+                    class="flex flex-col gap-1 text-zinc-600 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4 sm:gap-y-1">
+                    <a class="hover:underline" href="mailto:-">
+                        -@gmail.com
+                    </a>
+
+                    <span class="hidden sm:inline text-zinc-400">|</span>
+
+                    <a class="hover:underline" href="tel:-">
+                        +39 000 0000000
+                    </a>
+
+                    <span class="hidden md:inline text-zinc-400">|</span>
+
+                    <span class="hidden md:inline">
+                        ---, 15 — Bergámo (BG)
+                    </span>
+                </div>
+
+                <!-- Socials -->
+                <div class="flex items-center gap-4 text-zinc-600">
+                    <a class="hover:text-zinc-800" href="#" aria-label="Facebook">
+                        FB
+                    </a>
+                    <a class="hover:text-zinc-800" href="#" aria-label="Instagram">
+                        IG
+                    </a>
+                    <a class="hover:text-zinc-800" href="#" aria-label="WhatsApp">
+                        WA
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Header / Nav -->
+    <header x-data="{ open:false }" class="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/70 backdrop-blur-xl">
+        <!-- subtle header glow -->
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/5 to-transparent"></div>
+
+        <div class="relative mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+
+            <!-- Logo -->
+            <a href="index.html" class="group flex items-center gap-3">
+                <span
+                    class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-white/15 to-white/5 shadow-sm overflow-hidden transition group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+                    <img src="/assets/logo-63Hesafd.png" alt="Autotrader Villongo" class="h-12 w-12 object-contain" />
+                </span>
+
+
+                <div class="leading-tight">
+                    <p class="text-sm font-semibold tracking-tight text-white">
+                        Autotrader
+                        <span class="text-white/40">•</span>
+                        <span class="text-zinc-300">Bergámo</span>
+                    </p>
+                    <p class="text-xs text-white/55 -mt-0.5">
+                        Multimarca • KM0 • Usato certificato
+                    </p>
+
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-white/80">
+                <a class="transition hover:text-white hover:underline hover:underline-offset-8 decoration-white/30"
+                    href="index.html">Autotrader</a>
+
+                <a class="transition hover:text-white hover:underline hover:underline-offset-8 decoration-white/30"
+                    href="/valuta-usato.html">Valuta il tuo usato</a>
+
+                <a class="transition hover:text-white hover:underline hover:underline-offset-8 decoration-white/30"
+                    href="index.html#where-we-are">Dove siamo</a>
+
+            </nav>
+                    <!-- Mobile Menu Button -->
+        <button
+            class="md:hidden inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+            @click="open = !open" :aria-expanded="open" aria-label="Toggle menu">
+            <span class="sr-only">Toggle menu</span>
+
+            <!-- Icon swap -->
+            <svg x-show="!open" x-cloak xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+
+            <svg x-show="open" x-cloak xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+            <!-- Desktop CTA -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="/contatti.html"
+                    class="inline-flex items-center gap-2 rounded-2xl bg-white px-5 py-2.5 text-sm font-bold text-zinc-900 shadow-[0_10px_25px_rgba(0,0,0,0.30)] transition hover:-translate-y-0.5 hover:bg-zinc-200">
+                    Contattaci
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+        </div>
+
+
+        </div>
+
+        <!-- Mobile menu -->
+        <div x-show="open" x-cloak @click.outside="open=false" @keydown.escape.window="open=false" class="md:hidden">
+            <!-- Smooth transition wrapper -->
+            <div x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2"
+                class="border-t border-white/10 bg-zinc-950/85 backdrop-blur-xl">
+                <div class="mx-auto max-w-6xl px-4 py-4 grid gap-2 text-sm font-semibold text-white">
+
+                    <a class="rounded-2xl px-4 py-3 transition hover:bg-white/10" href="index.html"
+                        @click="open=false">Autotrader</a>
+                    <a class="rounded-2xl px-4 py-3 transition hover:bg-white/10" href="valuta-usato.html"
+                        @click="open=false">Valuta il tuo usato</a>
+                    <a class="rounded-2xl px-4 py-3 transition hover:bg-white/10" href="#where-we-are"
+                        @click="open=false">Dove siamo</a>
+
+                    <a class="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-4 py-3 text-center font-bold text-zinc-900 shadow-[0_10px_25px_rgba(0,0,0,0.30)] transition hover:bg-zinc-200"
+                        href="contatti.html" @click="open=false">
+                        Contattaci <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Hero (Video) -->
+    <section class="relative min-h-[85vh] lg:min-h-[92vh] overflow-hidden flex items-center">
+
+        <!-- Video Background -->
+        <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+            <source src="/assets/index-bg-CRMT3C3q.mp4" type="video/mp4">
+        </video>
+
+        <!-- Smooth blended overlays -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-zinc-950"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(60%_60%_at_30%_20%,rgba(255,255,255,0.10),transparent_60%)]">
+        </div>
+
+        <!-- Soft glow -->
+        <div
+            class="pointer-events-none absolute -top-40 left-1/2 h-[26rem] w-[42rem] -translate-x-1/2 rounded-full bg-white/10 blur-3xl">
+        </div>
+        <div
+            class="pointer-events-none absolute -bottom-48 left-[-10rem] h-96 w-96 rounded-full bg-blue-500/10 blur-3xl">
+        </div>
+
+        <!-- Content -->
+        <div class="relative mx-auto max-w-6xl px-4 py-16 sm:py-20 lg:py-28 w-full">
+            <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+
+                <!-- LEFT CONTENT -->
+                <div data-aos="fade-up" class="max-w-xl">
+                    <p
+                        class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] text-zinc-200 backdrop-blur">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                        Multimarca • KM0 • Usato certificato
+                    </p>
+
+                    <h1 class="mt-5 text-3xl font-bold tracking-tight text-white sm:text-5xl xl:text-6xl">
+                        La tua prossima auto,
+                        <span class="block text-sky-700">senza stress.</span>
+                    </h1>
+
+                    <p class="mt-4 text-sm sm:text-base leading-relaxed text-zinc-300">
+                        Selezione multi-brand, consulenza trasparente e soluzioni su misura —
+                        dall’acquisto alla permuta e al contatti.
+                    </p>
+
+
+                    <!-- Buttons: full width on mobile -->
+                    <div class="mt-7 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
+                        <a href="contatti.html"
+                            class="w-full sm:w-auto rounded-2xl bg-white px-6 py-3 text-center text-sm font-semibold text-black transition hover:bg-zinc-200">
+                            Contattaci
+                        </a>
+
+                        <a href="valuta-contatti.html"
+                            class="w-full sm:w-auto rounded-2xl border border-white/30 bg-white/10 px-6 py-3 text-center text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20">
+                            Valuta il tuo usato
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT CONTENT -->
+                <!-- Mobile: horizontal cards, Tablet: 2-column grid, Desktop: stacked right -->
+                <div class="lg:justify-self-end">
+                    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 lg:items-end">
+
+                        <div
+                            class="w-full rounded-3xl border border-white/15 bg-white/10 p-5 backdrop-blur transition hover:-translate-y-1 hover:bg-white/15">
+                            <p class="text-xl sm:text-2xl font-bold text-white">KM0</p>
+                            <p class="mt-1 text-sm text-zinc-300">Pronta consegna</p>
+                        </div>
+
+                        <div
+                            class="w-full rounded-3xl border border-white/15 bg-white/10 p-5 backdrop-blur transition hover:-translate-y-1 hover:bg-white/15">
+                            <p class="text-xl sm:text-2xl font-bold text-white">Usato</p>
+                            <p class="mt-1 text-sm text-zinc-300">Controllato e certificato</p>
+                        </div>
+
+                        <div
+                            class="sm:col-span-2 lg:col-span-1 w-full rounded-3xl border border-white/15 bg-white/10 p-5 backdrop-blur transition hover:-translate-y-1 hover:bg-white/15">
+                            <p class="text-xl sm:text-2xl font-bold text-white">contatti</p>
+                            <p class="mt-1 text-sm text-zinc-300">Breve / lungo termine</p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services / Multibrand (responsive) -->
+    <section
+        class="relative min-h-[85vh] lg:min-h-[92vh] overflow-hidden flex items-center border-t border-white/10 bg-zinc-950">
+
+        <!-- Background -->
+        <div class="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-950 to-black"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(70%_70%_at_70%_20%,rgba(59,130,246,0.12),transparent_60%)]">
+        </div>
+
+        <!-- Soft glows -->
+        <div
+            class="pointer-events-none absolute -top-40 left-1/2 h-72 w-[38rem] -translate-x-1/2 rounded-full bg-white/10 blur-3xl">
+        </div>
+        <div
+            class="pointer-events-none absolute -bottom-40 right-[-6rem] h-80 w-[28rem] rounded-full bg-emerald-500/10 blur-3xl">
+        </div>
+
+        <div class="relative mx-auto max-w-6xl px-4 py-16 sm:py-20 lg:py-28 w-full">
+            <!-- Mobile: stack. Tablet: stack with nicer spacing. Desktop: 2/1 columns -->
+            <div class="grid gap-10 lg:grid-cols-3 lg:items-center">
+
+                <!-- LEFT -->
+                <div data-aos="fade-up" class="lg:col-span-2">
+                    <p
+                        class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] text-zinc-200 backdrop-blur">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                        Autotrader Bergamo
+                    </p>
+
+                    <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                        Auto multimarca, <span class="text-zinc-300">zero stress.</span>
+                    </h2>
+
+                    <p class="mt-4 max-w-2xl text-sm leading-relaxed text-zinc-300 sm:text-base">
+                        Auto nuove, KM0 e usate certificate con garanzia.
+                        Assistenza completa dall’inizio alla fine:
+                        pratiche, finanziamenti e permuta con la massima trasparenza.
+                    </p>
+
+                    <!-- Chips: wrap nicely on mobile -->
+                    <div class="mt-7 flex flex-wrap gap-3">
+                        <span
+                            class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-zinc-200">
+                            Garanzia inclusa
+                        </span>
+                        <span
+                            class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-zinc-200">
+                            Assistenza finanziaria
+                        </span>
+                        <span
+                            class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-zinc-200">
+                            Valutazione permuta
+                        </span>
+                    </div>
+                </div>
+
+
+                <!-- RIGHT: Cards -->
+                <!-- Mobile: 1 col full width. Tablet: 2 cols with last spanning. Desktop: stacked to the right -->
+                <div class="lg:justify-self-end">
+                    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+
+                        <!-- Card 1 -->
+                        <div
+                            class="group w-full rounded-3xl border border-white/10 bg-white/5 p-5 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/10">
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="grid h-10 w-10 place-items-center rounded-xl bg-emerald-500/15 text-emerald-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 17V7m6 10V7M5 21h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-bold text-white">KM0</p>
+                                    <p class="mt-1 text-sm text-zinc-300">Pronta consegna</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div
+                            class="group w-full rounded-3xl border border-white/10 bg-white/5 p-5 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/10">
+                            <div class="flex items-start gap-3">
+                                <div class="grid h-10 w-10 place-items-center rounded-xl bg-sky-500/15 text-sky-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 12l2 2 4-4M12 22C7.03 20.5 4 16.36 4 11.6V5l8-3 8 3v6.6c0 4.76-3.03 8.9-8 10.4z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-bold text-white">Usato</p>
+                                    <p class="mt-1 text-sm text-zinc-300">Controllato e certificato</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 (span full on tablet) -->
+                        <div
+                            class="group w-full sm:col-span-2 lg:col-span-1 rounded-3xl border border-white/10 bg-white/5 p-5 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/10">
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="grid h-10 w-10 place-items-center rounded-xl bg-violet-500/15 text-violet-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8 7V3m8 4V3M4 11h16M6 21h12a2 2 0 002-2v-9a2 2 0 00-2-2H6a2 2 0 00-2 2v9a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-lg font-bold text-white">contatti</p>
+                                    <p class="mt-1 text-sm text-zinc-300">Breve / Lungo termine</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Testimonials (responsive) -->
+    <section class="relative border-t border-zinc-200 bg-white overflow-hidden">
+        <!-- Seamless transition from dark section above -->
+        <div
+            class="pointer-events-none absolute inset-x-0 -top-1 h-20 sm:h-24 bg-gradient-to-b from-zinc-950/30 via-white/80 to-white">
+        </div>
+
+        <!-- Subtle background texture / glow -->
+        <div
+            class="pointer-events-none absolute -top-40 left-1/2 h-72 w-[38rem] -translate-x-1/2 rounded-full bg-slate-200/60 blur-3xl">
+        </div>
+        <div
+            class="pointer-events-none absolute -bottom-40 right-[-6rem] h-72 w-[28rem] rounded-full bg-blue-200/50 blur-3xl">
+        </div>
+
+        <div class="relative mx-auto max-w-6xl px-4 py-14 sm:py-16 lg:py-20">
+            <!-- Header row -->
+            <div class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+                <div data-aos="fade-up" class="max-w-2xl">
+                    <p
+                        class="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] text-zinc-600 shadow-sm">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                        La tua opinione conta
+                    </p>
+
+                    <h2 class="mt-4 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+                        Cosa dicono di noi
+                    </h2>
+
+                    <p class="mt-2 text-sm text-zinc-600 sm:text-base">
+                        Esperienze reali di clienti che hanno acquistato, permutato o noleggiato con noi.
+                    </p>
+                </div>
+
+                <!-- Desktop button only -->
+                <a class="hidden sm:inline-flex items-center gap-2 rounded-2xl border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-zinc-800 shadow-sm transition hover:bg-zinc-50"
+                    href="contatti.html">
+                    Scrivici <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+            <div class="mt-8 sm:mt-10" data-aos="fade-up">
+                <div class="swiper testimonialsSwiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-full rounded-3xl border border-zinc-200 bg-white p-5 sm:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(0,0,0,0.10)]">
+                                <div class="flex items-center gap-1 text-amber-500 text-sm">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                </div>
+
+                                <p class="mt-4 text-zinc-700 leading-relaxed text-sm sm:text-base">
+                                    “Veloci, trasparenti e professionali. Ho trovato l’auto perfetta e mi hanno seguito
+                                    in ogni fase.”
+                                </p>
+
+
+                                <div class="mt-6 flex items-center gap-3">
+                                    <div
+                                        class="h-10 w-10 rounded-full bg-zinc-900 text-white grid place-items-center text-sm font-bold">
+                                        M
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-semibold text-zinc-900">Marco</p>
+                                        <p class="text-xs text-zinc-500">Bergamo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-full rounded-3xl border border-zinc-200 bg-white p-5 sm:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(0,0,0,0.10)]">
+                                <div class="flex items-center gap-1 text-amber-500 text-sm">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                </div>
+
+                                <p class="mt-4 text-zinc-700 leading-relaxed text-sm sm:text-base">
+                                    “Altamente consigliati: valutazione dell’usato corretta e consegna puntuale.”
+                                </p>
+
+                                <div class="mt-6 flex items-center gap-3">
+                                    <div
+                                        class="h-10 w-10 rounded-full bg-zinc-900 text-white grid place-items-center text-sm font-bold">
+                                        S
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-semibold text-zinc-900">Stefano</p>
+                                        <p class="text-xs text-zinc-500">Brescia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-full rounded-3xl border border-zinc-200 bg-white p-5 sm:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(0,0,0,0.10)]">
+                                <div class="flex items-center gap-1 text-amber-500 text-sm">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                </div>
+
+                                <p class="mt-4 text-zinc-700 leading-relaxed text-sm sm:text-base">
+                                    “Disponibili e affidabili. Un’ottima esperienza dall’inizio alla fine.”
+                                </p>
+
+                                <div class="mt-6 flex items-center gap-3">
+                                    <div
+                                        class="h-10 w-10 rounded-full bg-zinc-900 text-white grid place-items-center text-sm font-bold">
+                                        L
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-semibold text-zinc-900">Luca</p>
+                                        <p class="text-xs text-zinc-500">Iseo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Footer row: better mobile layout -->
+                <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+
+                    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+                        <!-- Mobile CTA (shows only on mobile) -->
+                        <a class="sm:hidden inline-flex items-center justify-center gap-2 rounded-2xl border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-zinc-800 shadow-sm transition hover:bg-zinc-50"
+                            href="contatti.html">
+                            Scrivici <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a class="inline-flex items-center gap-2 text-sm font-semibold text-zinc-900 hover:underline"
+                            href="contatti.html">
+                            Lascia un messaggio <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Brands (responsive) -->
+    <section
+        class="relative min-h-[75vh] lg:min-h-[85vh] flex items-center overflow-hidden border-t border-white/10 bg-zinc-950">
+
+        <!-- Elite background layers -->
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-950 to-black"></div>
+        <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_70%_at_20%_20%,rgba(59,130,246,0.14),transparent_60%)]">
+        </div>
+        <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_80%_30%,rgba(16,185,129,0.10),transparent_55%)]">
+        </div>
+
+        <!-- Soft glow -->
+        <div
+            class="pointer-events-none absolute -top-40 left-1/2 h-96 w-[46rem] -translate-x-1/2 rounded-full bg-white/10 blur-3xl">
+        </div>
+        <div
+            class="pointer-events-none absolute -bottom-44 right-[-8rem] h-[28rem] w-[32rem] rounded-full bg-blue-500/10 blur-3xl">
+        </div>
+
+        <!-- Optional subtle noise -->
+        <div class="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay"
+            style="background-image:url('assets/noise.png'); background-size:200px 200px;">
+        </div>
+
+        <!-- Content -->
+        <div class="relative mx-auto max-w-6xl px-4 py-16 sm:py-20 lg:py-28 w-full">
+
+            <!-- Heading -->
+            <div data-aos="fade-up" class="max-w-3xl">
+                <p
+                    class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] text-zinc-200 backdrop-blur">
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                    usato multimarca di fiducia
+                </p>
+
+                <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    I nostri brand
+                </h2>
+
+                <p class="mt-3 max-w-2xl text-sm text-zinc-300 sm:text-base">
+                    Una selezione curata di marchi affidabili, aggiornata settimanalmente in base alla disponibilità.
+                </p>
+
+            </div>
+
+            <!-- Carousel (mobile/tablet friendly spacing + smaller fades) -->
+            <div class="relative mt-10 sm:mt-12 lg:mt-14" data-aos="fade-up">
+
+                <!-- Edge fades (smaller on mobile so it doesn't hide logos) -->
+                <div
+                    class="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 sm:w-14 lg:w-20 bg-gradient-to-r from-zinc-950 to-transparent">
+                </div>
+                <div
+                    class="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 sm:w-14 lg:w-20 bg-gradient-to-l from-zinc-950 to-transparent">
+                </div>
+
+                <div class="swiper brandsSwiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- BMW -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group flex h-24 sm:h-28 items-center justify-center rounded-3xl border border-white/10 bg-white/5 px-6 sm:px-10 backdrop-blur transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/10">
+                                <img src="/assets/BMW.svg-X7vAxL6a.png" alt="BMW"
+                                    class="h-10 sm:h-12 w-auto opacity-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0" />
+                            </div>
+                        </div>
+
+                        <!-- AUDI -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group flex h-24 sm:h-28 items-center justify-center rounded-3xl border border-white/10 bg-white/5 px-6 sm:px-10 backdrop-blur transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/10">
+                                <img src="/assets/Audi_logo_detail.svg-DTXXYvp5.png" alt="Audi"
+                                    class="h-10 sm:h-12 w-auto opacity-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0" />
+                            </div>
+                        </div>
+
+                        <!-- FIAT -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group flex h-24 sm:h-28 items-center justify-center rounded-3xl border border-white/10 bg-white/5 px-6 sm:px-10 backdrop-blur transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/10">
+                                <img src="/assets/fiat-Cyf3tjUZ.svg" alt="Fiat"
+                                    class="h-10 sm:h-12 w-auto opacity-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0" />
+                            </div>
+                        </div>
+
+                        <!-- VW -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group flex h-24 sm:h-28 items-center justify-center rounded-3xl border border-white/10 bg-white/5 px-6 sm:px-10 backdrop-blur transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/10">
+                                <img src="/assets/vw_logo-oHieQnxc.png" alt="Volkswagen"
+                                    class="h-10 sm:h-12 w-auto opacity-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0" />
+                            </div>
+                        </div>
+
+                        <!-- PEUGEOT -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group flex h-24 sm:h-28 items-center justify-center rounded-3xl border border-white/10 bg-white/5 px-6 sm:px-10 backdrop-blur transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/10">
+                                <img src="/assets/peugeot-DmQEqtjn.svg" alt="Peugeot"
+                                    class="h-10 sm:h-12 w-auto opacity-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0" />
+                            </div>
+                        </div>
+
+                        <!-- MERCEDES -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group flex h-24 sm:h-28 items-center justify-center rounded-3xl border border-white/10 bg-white/5 px-6 sm:px-10 backdrop-blur transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/10">
+                                <img src="/assets/Mercedes-Logo-DVeUbb_x.png" alt="Mercedes-Benz"
+                                    class="h-10 sm:h-12 w-auto opacity-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Rental CTA (dark / cool) - responsive -->
+    <section
+        class="relative min-h-[65vh] lg:min-h-[75vh] flex items-center overflow-hidden border-t border-white/10 bg-slate-900 text-white">
+
+        <!-- Cooler background layers -->
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-800 via-slate-900 to-zinc-950">
+        </div>
+
+        <!-- Cool blue ambient light -->
+        <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_70%_at_25%_25%,rgba(96,165,250,0.18),transparent_60%)]">
+        </div>
+
+        <!-- Soft neutral counter-glow -->
+        <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_75%_45%,rgba(255,255,255,0.06),transparent_55%)]">
+        </div>
+
+        <!-- Glows -->
+        <div
+            class="pointer-events-none absolute -top-40 left-1/2 h-96 w-[44rem] -translate-x-1/2 rounded-full bg-sky-400/20 blur-3xl">
+        </div>
+        <div
+            class="pointer-events-none absolute -bottom-44 right-[-8rem] h-[26rem] w-[30rem] rounded-full bg-indigo-500/20 blur-3xl">
+        </div>
+
+        <div class="relative mx-auto max-w-6xl px-4 py-16 sm:py-20 lg:py-28 w-full">
+            <div class="grid gap-8 sm:gap-10 lg:grid-cols-2 lg:items-center">
+
+                <!-- Left -->
+                <div data-aos="fade-up" class="max-w-xl">
+                    <p
+                        class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] text-zinc-200 backdrop-blur">
+                        <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>
+                        Piani flessibili per il contatti a breve e lungo termine
+                    </p>
+
+                    <h2 class="mt-5 text-3xl font-bold tracking-tight sm:text-4xl">
+                        Contatti a breve e lungo termine
+                    </h2>
+
+                    <p class="mt-4 text-sm leading-relaxed text-zinc-300 sm:text-base">
+                        Auto, veicoli commerciali, minibus e camper.
+                        Soluzioni e pratiche gestite direttamente in sede, in modo rapido e trasparente.
+                    </p>
+
+                    <!-- Mini features: nicer on mobile (wrap + spacing) -->
+                    <div class="mt-6 flex flex-wrap gap-2 sm:gap-3">
+                        <span
+                            class="rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold text-zinc-200">
+                            Breve termine
+                        </span>
+                        <span
+                            class="rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold text-zinc-200">
+                            Lungo termine 
+                        </span>
+                        <span
+                            class="rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold text-zinc-200">
+                            Pratiche incluse
+                        </span>
+                    </div>
+
+                    <!-- Mobile CTA (shows only on small screens) -->
+                    <a href="contatti.html"
+                        class="mt-8 inline-flex w-full sm:hidden items-center justify-center gap-2 rounded-2xl bg-white px-7 py-3.5 text-sm font-bold text-slate-900 shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:bg-slate-100">
+                        Contattaci <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+                <!-- Right -->
+                <!-- Desktop/tablet CTA aligned right, but centered on tablet -->
+                <div class="hidden sm:flex sm:justify-start lg:justify-end" data-aos="fade-left">
+                    <a href="contatti.html"
+                        class="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl bg-white px-8 py-4 text-sm font-bold text-slate-900 shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:bg-slate-100">
+                        Contattaci
+                        <span class="transition group-hover:translate-x-0.5" aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KM0 + Contacts (responsive) -->
+    <section
+        class="relative min-h-[75vh] lg:min-h-[85vh] flex items-center overflow-hidden border-t border-white/10 bg-zinc-950">
+
+        <!-- Deep zinc background (clean & elite) -->
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-zinc-900 via-zinc-950 to-black"></div>
+
+        <!-- Subtle depth glows (neutral only) -->
+        <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_30%_25%,rgba(255,255,255,0.06),transparent_60%)]">
+        </div>
+        <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_50%_at_75%_45%,rgba(255,255,255,0.04),transparent_55%)]">
+        </div>
+
+        <!-- Soft ambient light -->
+        <div
+            class="pointer-events-none absolute -top-40 left-1/2 h-96 w-[42rem] -translate-x-1/2 rounded-full bg-white/10 blur-3xl">
+        </div>
+        <div
+            class="pointer-events-none absolute -bottom-44 right-[-8rem] h-[28rem] w-[30rem] rounded-full bg-white/5 blur-3xl">
+        </div>
+
+        <div class="relative mx-auto max-w-6xl px-4 py-16 sm:py-20 lg:py-28 w-full">
+            <div class="grid gap-10 sm:gap-12 lg:grid-cols-2 lg:items-center">
+
+                <!-- Left content -->
+                <div data-aos="fade-up" class="max-w-xl">
+                    <p
+                        class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] text-zinc-200 backdrop-blur">
+                        <span class="h-1.5 w-1.5 rounded-full bg-white/80"></span>
+                        Nuove auto KM0
+                    </p>
+
+                    <h2 class="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                        KM0 nuovi
+                        <span class="block text-sky-700">opzioni in pronta consegna</span>
+                    </h2>
+
+                    <p class="mt-4 text-sm leading-relaxed text-zinc-300 sm:text-base">
+                        Auto nuove e KM0 disponibili su richiesta, di qualsiasi marca, comprese soluzioni con consegna rapida.
+                        Assistenza completa con consulenza trasparente.
+                    </p>
+
+                    <!-- Highlights -->
+                    <div class="mt-6 flex flex-wrap gap-2 sm:gap-3">
+                        <span
+                            class="rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold text-zinc-200">
+                            Qualsiasi marca
+                        </span>
+                        <span
+                            class="rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold text-zinc-200">
+                            Consegna rapida
+                        </span>
+                        <span
+                            class="rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold text-zinc-200">
+                            Pratiche incluse
+                        </span>
+                    </div>
+
+                    <!-- Buttons (mobile: full width, tablet+: inline) -->
+                    <div class="mt-8 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
+                        <a class="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl bg-white px-6 py-3 text-sm font-bold text-zinc-900 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition hover:-translate-y-0.5 hover:bg-zinc-200"
+                            href="contatti.html">
+                            Richiedi informazioni
+                        </a>
+
+                        <a class="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl border border-white/25 bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur transition hover:bg-white/20"
+                            href="tel:+39000000000">
+                            Chiama ora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contacts -->
+                <!-- Mobile: 1 col. Tablet: 2 cols. Desktop: 2 cols, aligned. -->
+                <div class="grid gap-4 sm:grid-cols-2" data-aos="fade-left">
+
+                    <a class="group rounded-3xl border border-white/15 bg-white/10 p-5 sm:p-6 backdrop-blur transition hover:-translate-y-1 hover:bg-white/15 hover:border-white/25"
+                        href="tel:+393396993819">
+                        <div class="flex items-start justify-between">
+                            <p class="text-xs font-bold tracking-widest text-zinc-200">Unknown 1</p>
+                            <span class="h-2 w-2 rounded-full bg-white/80"></span>
+                        </div>
+                        <p class="mt-3 text-base sm:text-lg font-bold text-white">+39 000 0000000</p>
+                        <p class="mt-2 text-sm text-zinc-400">Sales</p>
+                        <p class="mt-3 text-sm font-semibold text-zinc-200">-@gmail.com</p>
+                    </a>
+
+                    <a class="group rounded-3xl border border-white/15 bg-white/10 p-5 sm:p-6 backdrop-blur transition hover:-translate-y-1 hover:bg-white/15 hover:border-white/25"
+                        href="tel:+393388513261">
+                        <div class="flex items-start justify-between">
+                            <p class="text-xs font-bold tracking-widest text-zinc-200">Unknown 2</p>
+                            <span class="h-2 w-2 rounded-full bg-white/80"></span>
+                        </div>
+                        <p class="mt-3 text-base sm:text-lg font-bold text-white">+39 000 0000000</p>
+                        <p class="mt-2 text-sm text-zinc-400">Sales</p>
+                        <p class="mt-3 text-sm font-semibold text-zinc-200">-@gmail.com</p>
+                    </a>
+
+                    <a class="group rounded-3xl border border-white/15 bg-white/10 p-5 sm:p-6 backdrop-blur transition hover:-translate-y-1 hover:bg-white/15 hover:border-white/25"
+                        href="tel:+393332421103">
+                        <div class="flex items-start justify-between">
+                            <p class="text-xs font-bold tracking-widest text-zinc-200">Unknown 3</p>
+                            <span class="h-2 w-2 rounded-full bg-white/80"></span>
+                        </div>
+                        <p class="mt-3 text-base sm:text-lg font-bold text-white">+39 000 0000000</p>
+                        <p class="mt-2 text-sm text-zinc-400">Sales</p>
+                        <p class="mt-3 text-sm font-semibold text-zinc-200">-@gmail.com</p>
+                    </a>
+
+                    <a class="group rounded-3xl border border-white/15 bg-white/10 p-5 sm:p-6 backdrop-blur transition hover:-translate-y-1 hover:bg-white/15 hover:border-white/25"
+                        href="mailto:-@gmail.com">
+                        <div class="flex items-start justify-between">
+                            <p class="text-xs font-bold tracking-widest text-zinc-200">OFFICE</p>
+                            <span class="h-2 w-2 rounded-full bg-white/70"></span>
+                        </div>
+                        <p class="mt-3 text-base sm:text-lg font-bold text-white break-words">
+                            -@gmail.com
+                        </p>
+                        <p class="mt-2 text-sm text-zinc-400">Support & Info</p>
+                        <p class="mt-3 text-sm font-semibold text-zinc-200">We reply the same day</p>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Gallery (GLightbox) - responsive -->
+    <section
+        class="relative min-h-[75vh] lg:min-h-[85vh] flex items-center overflow-hidden border-t border-zinc-200 bg-white">
+
+        <!-- Smooth transition from dark section above -->
+        <div
+            class="pointer-events-none absolute inset-x-0 -top-1 h-20 sm:h-24 bg-gradient-to-b from-zinc-950/25 via-white/80 to-white">
+        </div>
+
+        <!-- Soft ambient background -->
+        <div
+            class="pointer-events-none absolute -top-40 left-1/2 h-80 w-[44rem] -translate-x-1/2 rounded-full bg-slate-200/70 blur-3xl">
+        </div>
+        <div
+            class="pointer-events-none absolute -bottom-44 right-[-6rem] h-80 w-[30rem] rounded-full bg-zinc-200/70 blur-3xl">
+        </div>
+
+        <div class="relative mx-auto max-w-6xl px-4 py-14 sm:py-16 lg:py-20 w-full">
+
+            <!-- Header -->
+            <div class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between" data-aos="fade-up">
+                <div class="max-w-2xl">
+                    <p
+                        class="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] text-zinc-600 shadow-sm">
+                        <span class="h-1.5 w-1.5 rounded-full bg-zinc-900"></span>
+                        Autotrader Bergámo
+                    </p>
+
+                    <h2 class="mt-4 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+                        Galleria
+                    </h2>
+
+                    <p class="mt-2 text-sm text-zinc-600 sm:text-base">
+                        Dai uno sguardo all’interno del nostro showroom e scopri i nostri spazi, i veicoli e l’atmosfera.
+                    </p>
+                </div>
+
+                <!-- Desktop CTA -->
+                <a class="hidden sm:inline-flex items-center gap-2 rounded-2xl border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-zinc-900 shadow-sm transition hover:-translate-y-0.5 hover:bg-zinc-50"
+                    href="contatti.html">
+                    Visita lo showroom <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+            <!-- Gallery grid -->
+            <!-- Mobile: 1 col with larger images
+         Tablet: 2 cols
+         Desktop: 3 cols -->
+            <div class="mt-8 sm:mt-10 lg:mt-12 grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up">
+
+                <!-- Image 1 -->
+                <a class="glightbox group relative overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                    href="/assets/gallery/1.jpg">
+                    <img class="h-64 sm:h-56 lg:h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+                        src="/assets/gallery/1.jpg" alt="Showroom 1"
+                        onerror="this.style.display='none'; this.parentElement.classList.add('grid','place-items-center','text-zinc-500'); this.parentElement.innerHTML='GALLERY 1';" />
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-0 transition group-hover:opacity-100">
+                    </div>
+
+                    <!-- Mobile label (subtle, only on small screens) -->
+                    <div
+                        class="absolute bottom-3 left-3 sm:hidden rounded-full bg-white/85 px-3 py-1 text-[11px] font-bold text-zinc-900 shadow">
+                        Showroom
+                    </div>
+                </a>
+
+                <!-- Image 2 -->
+                <a class="glightbox group relative overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                    href="/assets/gallery/2.jpg">
+                    <img class="h-64 sm:h-56 lg:h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+                        src="/assets/gallery/2.jpg" alt="Showroom 2"
+                        onerror="this.style.display='none'; this.parentElement.classList.add('grid','place-items-center','text-zinc-500'); this.parentElement.innerHTML='GALLERY 2';" />
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-0 transition group-hover:opacity-100">
+                    </div>
+
+                    <div
+                        class="absolute bottom-3 left-3 sm:hidden rounded-full bg-white/85 px-3 py-1 text-[11px] font-bold text-zinc-900 shadow">
+                        Auto
+                    </div>
+                </a>
+
+                <!-- Image 3 -->
+                <a class="glightbox group relative overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                    href="/assets/gallery/3.jpg">
+                    <img class="h-64 sm:h-56 lg:h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+                        src="/assets/gallery/3.jpg" alt="Showroom 3"
+                        onerror="this.style.display='none'; this.parentElement.classList.add('grid','place-items-center','text-zinc-500'); this.parentElement.innerHTML='GALLERY 3';" />
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-0 transition group-hover:opacity-100">
+                    </div>
+
+                    <div
+                        class="absolute bottom-3 left-3 sm:hidden rounded-full bg-white/85 px-3 py-1 text-[11px] font-bold text-zinc-900 shadow">
+                        Atmosfera
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Mobile CTA (shows only on mobile) -->
+            <a class="mt-8 sm:hidden inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-sm font-semibold text-zinc-900 shadow-sm transition hover:bg-zinc-50"
+                href="contatti.html">
+                Visita lo showroom <span aria-hidden="true">→</span>
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Map (Leaflet) -->
+    <section id="where-we-are"
+        class="relative min-h-[75vh] lg:min-h-[85vh] flex items-center overflow-hidden border-t border-white/10 bg-zinc-950">
+
+        <!-- Background layers -->
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-zinc-900 via-zinc-950 to-black"></div>
+
+        <!-- Subtle depth glows -->
+        <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_25%_20%,rgba(255,255,255,0.06),transparent_60%)]">
+        </div>
+        <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_50%_at_75%_45%,rgba(255,255,255,0.04),transparent_55%)]">
+        </div>
+
+        <!-- Ambient glow -->
+        <div
+            class="pointer-events-none absolute -top-40 left-1/2 h-96 w-[42rem] -translate-x-1/2 rounded-full bg-white/10 blur-3xl">
+        </div>
+        <div
+            class="pointer-events-none absolute -bottom-44 right-[-8rem] h-[28rem] w-[32rem] rounded-full bg-white/5 blur-3xl">
+        </div>
+
+        <div class="relative mx-auto max-w-6xl px-4 py-20 sm:py-28 w-full">
+
+            <!-- Header -->
+            <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between" data-aos="fade-up">
+                <div>
+                    <p
+                        class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-zinc-200 backdrop-blur">
+                        <span class="h-1.5 w-1.5 rounded-full bg-white/80"></span>
+                        Dove siamo
+                    </p>
+
+                    <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                        Bergámo (BG)
+                    </h2>
+
+                    <p class="mt-2 max-w-xl text-sm text-zinc-400 sm:text-base">
+                        Vieni a trovarci nel nostro showroom o contattaci per indicazioni e appuntamenti.
+                    </p>
+                </div>
+
+                <a class="hidden sm:inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20"
+                    href="https://www.google.com/maps" target="_blank" rel="noreferrer">
+                    Apri in Google Maps →
+                </a>
+            </div>
+
+            <!-- Content -->
+            <div class="mt-14 grid gap-8 lg:grid-cols-3" data-aos="fade-up">
+
+                <!-- Info card -->
+                <div
+                    class="rounded-3xl border border-white/15 bg-white/10 p-7 text-white backdrop-blur transition hover:border-white/25">
+                    <p class="text-sm font-bold">Autotrader srl</p>
+                    <p class="mt-3 text-sm text-zinc-300">
+                        Viale Italia, 15 — 24060 Bergámo (BG)
+                    </p>
+
+                    <div class="mt-5 grid gap-2 text-sm">
+                        <a class="font-semibold text-white hover:underline" href="tel:+39000000000">
+                            +39 000 000000
+                        </a>
+                        <a class="font-semibold text-white hover:underline" href="mailto:-@gmail.com">
+                            -@gmail.com
+                        </a>
+                    </div>
+
+                    <a class="mt-7 inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-bold text-zinc-900 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition hover:-translate-y-0.5 hover:bg-zinc-200"
+                        href="contatti.html">
+                        Contatti
+                    </a>
+                </div>
+
+                <!-- Map -->
+                <div class="lg:col-span-2">
+                    <div id="map"
+                        class="h-[22rem] sm:h-[26rem] lg:h-[30rem] w-full rounded-3xl border border-white/15 overflow-hidden">
+                    </div>
+                    <!--
+                    <p class="mt-3 text-xs text-zinc-400">
+                        Note: replace the coordinates in <code class="font-mono">src/main.js</code> with the real ones.
+                    </p>
+                    -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative border-t border-white bg-slate-800 text-white">
+
+        <!-- Subtle depth & glow -->
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-700/40 via-slate-800 to-slate-900">
+        </div>
+        <div
+            class="pointer-events-none absolute -top-40 left-1/2 h-72 w-[40rem] -translate-x-1/2 rounded-full bg-white/10 blur-3xl">
+        </div>
+
+        <div class="relative mx-auto max-w-6xl px-4 py-14 text-sm text-white/75">
+            <div class="grid gap-10 md:grid-cols-3">
+
+                <!-- Company -->
+                <div>
+                    <p class="text-base font-bold text-white">Autotrader srl</p>
+                    <p class="mt-3 text-sm text-white/70">
+                        ---, <br />
+                        15 — Bergámo (BG)
+                    </p>
+                    <p class="mt-3 text-sm">
+                        <span class="text-white/60">Tel:</span>
+                        <a href="tel:+39000000000" class="font-semibold text-white hover:underline">
+                            000 000000
+                        </a>
+                    </p>
+                    <p class="mt-1 text-sm">
+                        <span class="text-white/60">Mail:</span>
+                        <a href="mailto:-@gmail.com" class="font-semibold text-white hover:underline">
+                            -@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <p class="text-base font-bold text-white">Links</p>
+                    <div class="mt-4 grid gap-3">
+                        <a class="inline-flex items-center gap-2 hover:underline" href="src/privacy_policy.html">
+                            Privacy Policy
+                        </a>
+                        <a class="inline-flex items-center gap-2 hover:underline" href="src/cookie.html">
+                            Cookie Policy
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div>
+                    <p class="text-base font-bold text-white">Richieste</p>
+                    <p class="mt-3 max-w-sm text-sm text-white/70">
+                        Scrivici per un preventivo personalizzato o per informazioni su permuta e noleggio.
+                    </p>
+
+                    <a class="mt-5 inline-flex items-center gap-2 rounded-2xl bg-white px-5 py-2.5 text-sm font-bold text-slate-900 shadow-[0_10px_25px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:bg-slate-100"
+                        href="contatti.html">
+                        Contattaci
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bottom bar -->
+            <div
+                class="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
+                <p>
+                    © <span id="year"></span> Autotrader | Tutti i diritti riservati
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Cookie banner (Alpine) -->
+    <div x-data="cookieBanner()" x-show="show" x-transition
+        class="fixed bottom-4 left-4 right-4 z-[60] mx-auto max-w-3xl rounded-2xl border bg-zinc-900 p-4 shadow-lg">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p class="text-sm text-white">
+                Utilizziamo i cookie per migliorare la tua esperienza. Continuando la navigazione, accetti la Cookie Policy.
+            </p>
+            <div class="flex gap-2">
+                <a href="src/cookie.html"
+                    class="rounded-xl border px-4 py-2 text-sm font-semibold hover:bg-slate-50">Leggi</a>
+                <button @click="accept()"
+                    class="rounded-xl bg-slate-800 px-4 py-2 text-sm font-semibold text-white hover:opacity-95">
+                    Accetta
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        function cookieBanner() {
+            return {
+                show: localStorage.getItem("cookie_ok") !== "1",
+                accept() {
+                    localStorage.setItem("cookie_ok", "1");
+                    this.show = false;
+                }
+            };
+        }
+    </script>
+
+
+</body>
+
+</html>
